@@ -1,0 +1,170 @@
+[
+  {
+    "id": "class_distribution",
+    "category": "Class Imbalance",
+    "title": "Class Distribution",
+    "file_path": "outputs/graphs/class_distribution.png",
+    "one_line_explanation": "Class counts are imbalanced: class 2 is largest (170,660) and class 4 is smallest (1,655)."
+  },
+  {
+    "id": "pairplot",
+    "category": "EDA",
+    "title": "Pair Plot of Important Features",
+    "file_path": "outputs/graphs/pairplot_top_features.png",
+    "one_line_explanation": "Class-colored pairwise distributions show overlap among the top features (Elevation, Horizontal_Distance_To_Roadways, Horizontal_Distance_To_Fire_Points) and help assess cover-type separability."
+  },
+  {
+    "id": "correlation_heatmap",
+    "category": "EDA",
+    "title": "Correlation Heatmap",
+    "file_path": "outputs/graphs/correlation_heatmap.png",
+    "one_line_explanation": "Correlations highlight redundant continuous predictors and feature relationships."
+  },
+  {
+    "id": "feature_boxplots",
+    "category": "EDA",
+    "title": "Feature Box Plots",
+    "file_path": "outputs/graphs/feature_boxplots.png",
+    "one_line_explanation": "Per-class box plots compare continuous-feature ranges and reveal overlap and outliers."
+  },
+  {
+    "id": "feature_importance",
+    "category": "EDA",
+    "title": "Feature Importance",
+    "file_path": "outputs/graphs/feature_importance.png",
+    "one_line_explanation": "Random Forest ranks Elevation as the most influential feature; importance is predictive association, not causation."
+  },
+  {
+    "id": "train_val_accuracy",
+    "category": "Validation",
+    "title": "Train vs Validation Accuracy",
+    "file_path": "outputs/graphs/train_validation_accuracy.png",
+    "one_line_explanation": "kNN has the highest validation accuracy (0.909); gaps indicate generalization risk."
+  },
+  {
+    "id": "train_val_loss",
+    "category": "Validation",
+    "title": "Train vs Validation Log Loss",
+    "file_path": "outputs/graphs/train_validation_log_loss.png",
+    "one_line_explanation": "Lower validation log loss indicates better probability quality; a train-validation gap can signal overfitting."
+  },
+  {
+    "id": "learning_curves",
+    "category": "Validation",
+    "title": "Learning Curves",
+    "file_path": "outputs/graphs/learning_curves.png",
+    "one_line_explanation": "Training and cross-validation trends show data-size effects; Random Forest has the highest final cross-validation score (0.772)."
+  },
+  {
+    "id": "validation_curves",
+    "category": "Hyperparameter Tuning",
+    "title": "Validation Curves (kNN and Decision Tree)",
+    "file_path": "outputs/graphs/validation_curves.png",
+    "one_line_explanation": "kNN validation peaks at n_neighbors=3 (0.742); Decision Tree validation peaks at max_depth=10 (0.727)."
+  },
+  {
+    "id": "cross_validation_scores",
+    "category": "Validation",
+    "title": "5-Fold Cross-Validation",
+    "file_path": "outputs/graphs/cross_validation_scores.png",
+    "one_line_explanation": "Bars show mean accuracy and standard deviation across five stratified folds; lower variance indicates more stable scores."
+  },
+  {
+    "id": "accuracy_comparison",
+    "category": "Model Comparison",
+    "title": "Test Accuracy Comparison",
+    "file_path": "outputs/graphs/accuracy_comparison.png",
+    "one_line_explanation": "kNN has the highest test accuracy at 0.907; accuracy should be read alongside class-balanced metrics."
+  },
+  {
+    "id": "prf_comparison",
+    "category": "Model Comparison",
+    "title": "Precision / Recall / F1 Comparison",
+    "file_path": "outputs/graphs/precision_recall_f1.png",
+    "one_line_explanation": "Macro scores weight every class equally; Random Forest has the highest test macro-F1 (0.854), while weighted F1 follows class frequencies."
+  },
+  {
+    "id": "time_comparison",
+    "category": "Model Comparison",
+    "title": "Training and Prediction Time",
+    "file_path": "outputs/graphs/training_prediction_time.png",
+    "one_line_explanation": "Bars compare training and full-test prediction time; kNN trained fastest (0.19s) on this run."
+  },
+  {
+    "id": "roc_curves",
+    "category": "ROC Curves",
+    "title": "Macro OvR ROC Curves",
+    "file_path": "outputs/graphs/roc_curves.png",
+    "one_line_explanation": "Macro one-vs-rest ROC curves compare class-ranking quality across models on a stratified test subset."
+  },
+  {
+    "id": "confusion_logistic_regression_raw",
+    "category": "Confusion Matrices",
+    "title": "Logistic Regression - Raw Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_logistic_regression_raw.png",
+    "one_line_explanation": "Raw confusion matrix for Logistic Regression; Class 5 (Aspen) has the lowest per-class recall for Logistic Regression (0.008); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "confusion_logistic_regression_normalized",
+    "category": "Confusion Matrices",
+    "title": "Logistic Regression - Normalized Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_logistic_regression_normalized.png",
+    "one_line_explanation": "Normalized confusion matrix for Logistic Regression; Class 5 (Aspen) has the lowest per-class recall for Logistic Regression (0.008); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "confusion_knn_raw",
+    "category": "Confusion Matrices",
+    "title": "kNN - Raw Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_knn_raw.png",
+    "one_line_explanation": "Raw confusion matrix for kNN; Class 4 (Cottonwood/Willow) has the lowest per-class recall for kNN (0.681); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "confusion_knn_normalized",
+    "category": "Confusion Matrices",
+    "title": "kNN - Normalized Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_knn_normalized.png",
+    "one_line_explanation": "Normalized confusion matrix for kNN; Class 4 (Cottonwood/Willow) has the lowest per-class recall for kNN (0.681); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "confusion_decision_tree_raw",
+    "category": "Confusion Matrices",
+    "title": "Decision Tree - Raw Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_decision_tree_raw.png",
+    "one_line_explanation": "Raw confusion matrix for Decision Tree; Class 5 (Aspen) has the lowest per-class recall for Decision Tree (0.381); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "confusion_decision_tree_normalized",
+    "category": "Confusion Matrices",
+    "title": "Decision Tree - Normalized Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_decision_tree_normalized.png",
+    "one_line_explanation": "Normalized confusion matrix for Decision Tree; Class 5 (Aspen) has the lowest per-class recall for Decision Tree (0.381); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "confusion_random_forest_raw",
+    "category": "Confusion Matrices",
+    "title": "Random Forest - Raw Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_random_forest_raw.png",
+    "one_line_explanation": "Raw confusion matrix for Random Forest; Class 5 (Aspen) has the lowest per-class recall for Random Forest (0.488); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "confusion_random_forest_normalized",
+    "category": "Confusion Matrices",
+    "title": "Random Forest - Normalized Confusion Matrix",
+    "file_path": "outputs/graphs/confusion_random_forest_normalized.png",
+    "one_line_explanation": "Normalized confusion matrix for Random Forest; Class 5 (Aspen) has the lowest per-class recall for Random Forest (0.488); diagonal cells are correct and off-diagonal cells show errors."
+  },
+  {
+    "id": "search_results",
+    "category": "Hyperparameter Tuning",
+    "title": "Grid Search Results",
+    "file_path": "outputs/graphs/hyperparameter_search.png",
+    "one_line_explanation": "kNN peaks at n_neighbors=5 (CV accuracy 0.735); Decision Tree peaks at max_depth=8 (CV accuracy 0.720)."
+  },
+  {
+    "id": "decision_boundaries",
+    "category": "Decision Boundaries",
+    "title": "Decision Boundaries - Elevation vs Roadways",
+    "file_path": "outputs/graphs/decision_boundaries.png",
+    "one_line_explanation": "These 2-D model boundaries and sample points use Elevation and distance to roadways; they cannot represent all 54-feature interactions."
+  }
+]
